@@ -3,23 +3,23 @@ It's a simple todo-list app that allows user to add, delete and view tasks.
 Built as a introduction task for KSI Projects
 
 ## Built With
--Python(Pydantic, SQLAlchemy, FastAPI)
--SQLite
--Docker
+- Python(Pydantic, SQLAlchemy, FastAPI)
+- SQLite
+- Docker
 
 ## Getting Started
 ### Prerequisites
--Python 3.x
--pip3
+- Python 3.x
+- pip3
 
 #### **Without docker**
 Install dependecies    
 ```bash
-   pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 Then run the backend server
   ```bash
-  python3 -m uvicorn main:app --reload
+python3 -m uvicorn main:app --reload
   ```
 
 ### **With docker**

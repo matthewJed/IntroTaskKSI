@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, Integer, String, Column
 from sqlalchemy.orm import declarative_base, Session
-from models.todo_model import Todo
-from database import get_db
+from backend.models.todo_model import Todo
+from backend.database import get_db
 class todoRepository:
     def get_all(self, db: Session):
         return db.query(Todo).all()

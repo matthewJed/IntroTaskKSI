@@ -9,3 +9,6 @@ class Todo(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     description = Column(String, nullable=True)
+
+#Creating all of the tables
+Base.metadata.create_all(engine)

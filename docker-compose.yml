@@ -1,0 +1,30 @@
+services:
+  fastapi-template-app:
+    image: fastapi-template-app:latest
+    hostname: fastapi-template/app
+    container_name: fastapi-template-app
+    restart: always
+    volumes:
+      - ./backend:/app
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command:
+      ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_URL: sqlite:///myDatabase.db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    container_name: react-frontend
+    ports:
+      - "5173:5173"
+    restart: always
+    command: ["npm", "run", "dev", "--", "--host"]

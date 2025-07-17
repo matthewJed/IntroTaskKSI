@@ -1,0 +1,9 @@
+.listOfTasks {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.addButton {
+  padding: 0.5rem 1rem;
+  margin: 02rem;
+}

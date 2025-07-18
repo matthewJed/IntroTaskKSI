@@ -3,6 +3,7 @@ It's a simple todo-list app that allows user to add, delete and view tasks.
 Built as a introduction task for KSI Projects
 
 ## Built With
+- React
 - Python(Pydantic, SQLAlchemy, FastAPI)
 - SQLite
 - Docker
@@ -11,37 +12,24 @@ Built as a introduction task for KSI Projects
 ### Prerequisites
 - Python 3.x
 - pip3
-
-#### **Without docker**
-Install dependecies    
+**Clone this repository**
 ```bash
-pip3 install -r requirements.txt
+git clone https://github.com/matthewJed/IntroTaskKSI
+cd IntroTaskKsi
 ```
-Then run the backend server
-  ```bash
-python3 -m uvicorn main:app --reload
-  ```
 
-### **With docker**
-Build the image
+**Build and run containers with Docker**
 ```bash 
-docker build -t simple-todo-app:latest .
+docker-compose up --build
 ```
-Run the container
+this will build and run React frontend on http://localhost:3000
+and FastAPI backend on http://localhost:8000
+
+**Stop the app**
 ```bash
-docker run -d \
-  --name simple-todo \
-  -p 8080:8080 \
-  simple-todo-app:latest
+docker-compose down
 ```
-Stop the container
-```bash
- docker stop simple-todo
-```
-Remove the container
-```bash
-  docker rm simple-todo
-```
+
 
 ## API Endpoints
 

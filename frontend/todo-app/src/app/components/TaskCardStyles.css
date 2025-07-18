@@ -1,0 +1,45 @@
+li {
+  list-style: none;
+}
+
+.taskWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 1.5rem;
+
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  gap: 1rem;
+}
+
+.taskName {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.taskDescription {
+  font-size: 0.95rem;
+  color: #333;
+  text-align: justify;
+}
+.taskWrapper button {
+  align-self: flex-end;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.taskWrapper button:hover {
+  background-color: #c0392b;
+}

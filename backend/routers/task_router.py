@@ -17,7 +17,8 @@ def get_todos(db: Session = Depends(get_db)):
 
 @router.post("/", response_model=Todo)
 def create_todo(todo_data: TodoCreate,db: Session = Depends(get_db)):
-      return todo_repository.create(db, name=todo_data.name, description=todo_data.description)
+      todo = todo_repository.create(db, name=todo_data.name, description=todo_data.description)
+      return todo
 
 @router.delete("/{todo_id}", response_model=Todo)
 def remove_todo(todo_id: int,db: Session = Depends(get_db)):

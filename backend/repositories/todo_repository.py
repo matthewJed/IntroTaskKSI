@@ -10,6 +10,7 @@ class todoRepository:
         new_todo = Todo(name=name, description=description)
         db.add(new_todo)
         db.commit()
+        db.refresh(new_todo)
         return new_todo
     
     def delete(self, db: Session, todo_id: int):
@@ -17,6 +18,7 @@ class todoRepository:
         if todo:
             db.delete(todo)
             db.commit()
+
         return todo
 
 

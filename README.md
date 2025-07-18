@@ -12,6 +12,7 @@ Built as a introduction task for KSI Projects
 ### Prerequisites
 - Python 3.x
 - pip3
+- 
 **Clone this repository**
 ```bash
 git clone https://github.com/matthewJed/IntroTaskKSI
